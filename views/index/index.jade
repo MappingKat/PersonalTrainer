@@ -1,8 +1,50 @@
 extends ../layout
 
 block content
-    section(id="intro", class="intro")
+    section(id="intro", class="intro-header")
+        nav(class="original-nav", role="navigation")
+            .nav-wrapper.container
+                a(href="#", class="brand-logo") Personal Trainer Finder
+                ul(class="right hide-on-med-and-down")
+                    li
+                        a(href="#") Home
+                    li
+                        a(href="#") About
+                    li
+                        a(href="#") Testimonials
+                    li
+                        a(href="#") Bios
+                    li
+                        a(href="#") Register
+
+                ul(id="nav-mobile", class="side-nav")
+                    li
+                        a(href="#") Home
+                    li
+                        a(href="#") About
+                    li
+                        a(href="#") Testimonials
+                    li
+                        a(href="#") Bios
+                    li
+                        a(href="#") Register
+
+                a(href="#", data-activates="nav-mobile", class="button-collapse")
+                    i.mdi-navigation-menu
+
         #index-banner.section.no-pad-bot
             .container
                 .row.center
                     h5.header.col.s12.light.lhd-details-0 Personal Trainer Finder
+
+    section(id="about", class="about")
+        .bottom-overlay
+            .container
+                .row
+                    .intro.col.s12
+                        h4.center-align About
+                        h3.center-align What is Personal Trainer Finder?
+
+
+block bottomscripts
+    script(src="javascript/init.js", type="text/javascript")

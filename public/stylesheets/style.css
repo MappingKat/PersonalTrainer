@@ -5,9 +5,29 @@ body {
   background: #f8ffff;
 }
 
-.intro {
+.intro-header {
   min-height: 100%;
   position: relative;
   background: #333;
   color: #fff;
+}
+.intro-header .original-nav {
+  background: transparent !important;
+  box-shadow: none;
+}
+
+.about .intro h3 {
+  color: #333;
+  font-weight: 300;
+  font-size: 48px;
+  padding-bottom: 31px;
+  letter-spacing: 2px;
+}
+.about .intro h4 {
+  text-transform: uppercase;
+  color: #adb1b1;
+  font-size: 22px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  padding-top: 45px;
 }
