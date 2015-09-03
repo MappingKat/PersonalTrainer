@@ -1,4 +1,5 @@
 var express = require('express');
+var orm = require('orm');
 var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
@@ -20,8 +21,19 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(require('node-compass')({mode: 'expanded'}))
+app.use(require('node-compass')({mode: 'expanded'}));
 app.use(express.static(path.join(__dirname, 'public')));
+
+/*app.use(orm.express(opts, {
+    define: function (db, models, next) {
+        db.load("./models", function (err2) {
+            if (err2)
+                throw err2;
+            db.sync();
+        })
+        next();
+    }
+}));*/
 
 app.use('/', routes);
 app.use('/users', users);
